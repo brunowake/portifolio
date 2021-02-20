@@ -34,7 +34,7 @@ elements.forEach(e => {
     content.appendChild(e)
 })
 
-// chaging all scrollmargintop [list-item]
+// chaging scrollmargintop function - [list-item]
 function changingScrollMaringTop(size) {
     getAllItems("[list-item]").forEach((e) => {
         e.style.scrollMarginTop = `${size}px`
@@ -63,18 +63,24 @@ getAllItems("[list-item]").forEach((e,index) => {
 
 
 
-//connecting anchors 
+//linking  anchors 
 getAllItems("[list-nav]").forEach((e,index) =>{
     e.setAttribute("href", `#${index+1}`)
+    // setting scrollmargintop() as onclick function in each <a> on the menu. 
     e.onclick = function(e) {
         let currentUrlNumber = parseInt(window.location.href.split('#')[1])
-        let currentLinkId = parseInt(e.target.href.split('#')[1])
-        console.log('url: '+currentUrlNumber, 'link '+currentLinkId);
-        if( currentLinkId >= currentUrlNumber || window.location.href.split('#')[1] === undefined){
+        let navigateTo = parseInt(e.target.href.split('#')[1])
+        // to chechk out in which direction I'm going, I'm taking the current URL and comparing to the navigateTo
+        // if nagateTo > currentUrlNumber means that I'm scrolling down 
+        console.log('url: '+currentUrlNumber, 'link '+navigateTo);
+        // this is the part where we set the ScrollMarginTio to reveal the element according to its position 
+        //if i'm using the links to go toward the end of the page we keep the scrollmargintop of default - 80px
+        if( navigateTo >= currentUrlNumber || window.location.href.split('#')[1] === undefined){
             changingScrollMaringTop(80)
         }
+        // if i'm going back to the beginning, change the scroll margin top to reveal the element i'm going to
         else{
-            changingScrollMaringTop(590 * (currentUrlNumber - currentLinkId) +(index *6))
+            changingScrollMaringTop(590 * (currentUrlNumber - navigateTo) +(index *6))
 
         }
 
