@@ -1,0 +1,158 @@
+/****************** Grid Elements***********************/
+header {
+    grid-area: navegacao;
+    top: 0;
+    display: block;
+    position: sticky;
+    background-color: rgb(179, 176, 176);
+  
+
+}
+
+main{
+    grid-area: conteudo;
+}
+footer{
+    grid-area: rodape;
+    width: 100%;
+}
+/***************************** whole page************************************/
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr 150px;
+    background-color:lightgray ;
+    grid-template-areas: 
+    'navegacao navegacao'
+    'conteudo conteudo'
+    'rodape rodape'
+    ;
+}
+/******************************** Content *************************************** */
+.content {
+    
+}
+
+.content ul{
+    /* background-image: url('../src/libant.png');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: contain; */
+    position: relative;
+    padding: 0 40px;
+    list-style: none;
+    width: 100%;
+    margin: 10px 0;
+}
+
+[list-item] {
+    background-image: url('../src/img2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 60px;
+    padding: 0;
+    scroll-margin-top: 80px;
+    position: sticky;
+    margin-top: 20px;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: rgb(19, 139, 113);
+    box-shadow: -4px 5px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+/*************************** footer **********************************/
+
+.footer {
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color:rgb(179, 176, 176);
+    color: white;
+}
+
+.clearlist{
+    list-style: none;
+    padding: 0;    
+    margin: 0;
+
+}
+
+.footerColunm {  
+    padding: 10px;
+    width: 400px;
+    margin: 0 10vw 0 8vw;
+
+}
+
+.footerColunmCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerColunm li {
+    margin: 5px;
+}
+
+.socialMidia{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.socialMidia img {
+    width: 32px;
+    height: 32px;
+}
+
+/* ***************** Menu********************** */
+.logo {
+    padding: 5px;
+}
+.logo img {
+    width: 140px;
+    height: 70px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+    padding: 10px 15px;
+}
+.navigation{
+    display: flex;
+    list-style: none;
+    align-content: center;
+    padding: 0;
+}
+
+.navigation li{
+
+    padding: 5px;
+
+}
