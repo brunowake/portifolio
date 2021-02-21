@@ -1,10 +1,17 @@
+@font-face {
+    font-family: 'Cabin';
+    src: url('../fonts/Cabin-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+
+
 /****************** Grid Elements***********************/
 header {
     grid-area: navegacao;
     top: 0;
     display: block;
     position: sticky;
-    background-color: rgb(179, 176, 176);
+    background-color: rgb(225, 195, 123);
   
 
 }
@@ -22,10 +29,15 @@ html {
 }
 
 *{
+    font-family: 'Cabin';
     box-sizing: border-box;
 }
 
 body{
+    background-image: url('../src/body.png');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: contain;
     margin: 0;
     display: grid;
     min-height: 100vh;
@@ -39,16 +51,50 @@ body{
     ;
 }
 /******************************** Content *************************************** */
-.content {
-    
+.listText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px;
+    height: 100%;
 }
 
-.content ul{
+.listPro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.listPro img {
+    width: 400px;
+}
+
+.listPro ul {
+    /* width: calc((100% - 400px) - 20%); */
+    padding: 0;
+    list-style: none;
+    margin:0;
+    flex: 1;
+}
+
+.listPro div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+
+
+
+
+.contentUl{
     /* background-image: url('../src/libant.png');
     background-repeat: repeat-y;
     background-position: center;
     background-size: contain; */
-    position: relative;
     padding: 0 40px;
     list-style: none;
     width: 100%;
@@ -56,20 +102,19 @@ body{
 }
 
 [list-item] {
-    background-image: url('../src/img2.jpg');
+    background-image: url('../src/cells.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-size: 60px;
+    font-size: 1.4em;
     padding: 0;
     scroll-margin-top: 80px;
     position: sticky;
     margin-top: 20px;
     height: 500px;
     width: 100%;
-    border: 1px solid #000;
-    background-color: rgb(19, 139, 113);
-    box-shadow: -4px 5px 3px 0 rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(225, 195, 123, .2);
+    box-shadow: -2px 2px 8px 3px rgba(237, 190, 134, 0.4);
 }
 
 /*************************** footer **********************************/
@@ -81,7 +126,7 @@ body{
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    background-color:rgb(179, 176, 176);
+    background-color:rgb(225, 195, 123);
     color: white;
 }
 

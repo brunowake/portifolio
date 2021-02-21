@@ -23,16 +23,16 @@ function newElement(tagName,className,customAttrib,customValue) {
 // }
 
 // creating an array of li
-let elements = []
-for (let i = 1; i < 7; i++) {
-    elements.push(newElement('li','listItem', 'list-item', `${i}`))
+// let elements = []
+// for (let i = 1; i < 7; i++) {
+//     elements.push(newElement('li','listItem', 'list-item', `${i}`))
 
-}
+// }
 
-const  content = document.querySelector('.content > ul')
-elements.forEach(e => {
-    content.appendChild(e)
-})
+// const  content = document.querySelector('.content > ul')
+// elements.forEach(e => {
+//     content.appendChild(e)
+// })
 
 // chaging scrollmargintop function - [list-item]
 function changingScrollMaringTop(size) {
@@ -54,7 +54,7 @@ getAllItems("[list-item]").forEach((e,index) => {
     e.id = `${index+1}`
     e.style.top = `${90 +(index*6)}px`
     e.style.marginLeft = `${index*5}px`
-    e.innerText = index +1
+    
 
 })
 
